@@ -1,4 +1,4 @@
-import sumar from "./sumador";
+import verificar_titulo from "./verificar_titulo";
 
 const titulo = document.querySelector("#titulo");
 const contenido = document.querySelector("#contenido");
@@ -8,7 +8,7 @@ const div = document.querySelector("#resultado-div");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const tittle = titulo.value;
+  const tittle = verificar_titulo(titulo.value);
   const content = contenido.value;
 
   div.innerHTML = "<p>" + tittle +"</br>"+ content + "</p>";
